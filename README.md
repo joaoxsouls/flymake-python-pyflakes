@@ -25,9 +25,11 @@ To use `flake8` instead of `pyflakes`, add this line:
 
     (setq flymake-python-pyflakes-executable "flake8")
 
-To add ignores to flake8, for example E501 and F403
+You can pass extra arguments to the checker program by customizing
+the variable `flymake-python-pyflakes-extra-arguments`, or setting it
+directly, e.g.
 
-    (setq flymake-python-pyflakes-flake8-ignores "E501,F403")
+    (setq flymake-python-pyflakes-extra-arguments '("--ignore=W806"))
 
 [marmalade]: http://marmalade-repo.org
 [melpa]: http://melpa.milkbox.net
